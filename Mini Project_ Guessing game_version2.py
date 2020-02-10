@@ -15,8 +15,8 @@ if you type n, it prints “Thanks for Playing” and exits the game.
 """
 import random
 answer = ""
-y = 0
-x = 0
+y = ""
+x = ""
 while answer != 'n':
     y =random.randint(1, 10) 
     X = input("Pick a number from 1 to 10 only:")  
