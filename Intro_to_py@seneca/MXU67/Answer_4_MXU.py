@@ -34,15 +34,14 @@ for myd in dlst:
         d[k].append(v)
 #print(d)
     
-user = input("plz enter a product name:")
+user = input("plz enter a product name:").capitalize()
 if user not in d.keys():
     print(f"{user} NOT found.")
 elif user in d.keys():
     for x in d[user]:
         print(x)
 
-"balalallaa"
-"balalal"
+
 
 
 
