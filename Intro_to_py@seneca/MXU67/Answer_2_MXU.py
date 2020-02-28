@@ -17,20 +17,19 @@ while len(num2) == 0 or int(num2) < 0:
 if len(num1) > len(num2):
     print(f'{num1} > {num2}')
 elif len(num1) < len(num2):
-    print(f'{num1} < {num1}')
+    print(f'{num1} < {num2}')
 elif len(num1) == len(num2):
-    i = 0
-    while num1[i] == num2[i] and i < len(num1)-1:
-        i = i + 1
-    if i == len(num1):
-        print("equal")
-    elif i < len(num1):
-        if int(num1[i]) > int(num2[i]):
-            print(f"{num1} > {num2}")
-        elif int(num1[i]) < int(num2[i]):
-            print(f"{num1} < {num2}")
-
-            
+       i = 0
+       while i < len(num1) and num1[i] == num2[i]:   # cannot change the order, remember AND/OR checks the first condition.
+             i = i + 1
+       if i == len(num1):
+           print("equal")
+       elif i < len(num1):
+          if int(num1[i]) > int(num2[i]):
+              print(f"{num1} > {num2}")
+          elif int(num1[i]) < int(num2[i]):
+              print(f"{num1} < {num2}")
+    
     
     
     
