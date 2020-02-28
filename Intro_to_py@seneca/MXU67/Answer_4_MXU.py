@@ -35,13 +35,24 @@ for myd in dlst:
 #print(d)
     
 user = input("plz enter a product name:").capitalize()
-if user not in d.keys():
-    print(f"{user} NOT found.")
-elif user in d.keys():
-    for x in d[user]:
+
+from difflib import get_close_matches
+
+if user in d.keys():
+    meaning = d[user]
+    for x in meaning:
         print(x)
-
-
-
-
-
+elif user not in d.keys():
+    closet_word = get_close_matches(user, d.keys())[0]  
+    user2 = input(f"Do you mean {closet_word}? Y/N:  ")
+    while user2 not in ["N", "Y"]:
+        user2 = input("plz enter Y or N only: ")
+    if user2 == "N":
+        print("Sorry, there's no such product. Plz check the product name and re-run the program.")
+    elif user2 == "Y":
+        meaning2 = d[closet_word]
+        for x in meaning2:
+            print(x)
+        
+            
+        
