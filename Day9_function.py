@@ -60,15 +60,15 @@ if i want to change the value of a varibale, I need to declare that variable as 
 Note: If you define a variable in local level while it is also defined in the global level, the local level overwrites the global level value.
 """
 total = 0
-def count():
+def countt():
   global total
   total += 1
   return total
-print(count())
-print(count())
-print(count())
-print(count())
-print(count())
+print(countt())
+print(countt())
+print(countt())
+print(countt())
+print(countt())
 
 
 def outer():
