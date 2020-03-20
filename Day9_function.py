@@ -91,10 +91,11 @@ print(product(3,7))
 
 """Q25: Q: write a function that it gets a number between 1 to 7 and it returns the day of the week (Sunday for 1, Monday for 2 ...)
 """
-day = {1:"Mon", 2:"Tue", 3:"Wed", 4:"Thur", 5:"Fri", 6:"Sat", 7:"Sun"}
-num = input("Enter a number between 1 and 7: ")
+num = ""
 def what_day(num):
-  return day.get(int(num),"")
+    day = {1:"Mon", 2:"Tue", 3:"Wed", 4:"Thur", 5:"Fri", 6:"Sat", 7:"Sun"}
+    num = input("Enter a number between 1 and 7: ")
+    return day.get(int(num),"")
 print(what_day(num))
 
 """Q26:Q: write a function that it gets one parameter that is a list and it returns the last item of the list.
@@ -163,26 +164,23 @@ print(repeat(a_str))
 print(repeat(a_str).items()) 
 
 
-string = ""
-def repeat2(string): 
-  string = input("Plz enter a word: ").lower
+def repeat2(a_str): 
+  a_str = input("Plz enter a word: ").lower()
+  a_str_lst = list(a_str)
   #USE collections.Counter() TO MAP CHARACTER FREQUENCIES OF A STRING
-  import collections
-  frequencies = collections.Counter(string)
+  from collections import Counter
+  frequencies = Counter(a_str_lst)
   repeated = {}
-  for key, value in frequencies.items():
-  #iterate through frequencies dictionary
+  for key, value in frequencies.items(): #iterate through frequencies dictionary
     if value >= 1:
         repeated[key] = value
   return repeated
-print(repeat2(string))
-      
+print(repeat2(a_str))
 
 
+string = ""
+def multiple_letter_count(string):
+    string = input("Plz enter a string: ").lower()
+    return {letter: string.count(letter) for letter in string}
+print(multiple_letter_count(string))
 
-  
-whvbjchleakwfijewkcjwelkfwjlskcnlkwejdoqwjx
-bwedjwelbljqwelwehilwejnc
-kjnkjnkoijo;ijo;i
-
-hcsjnCLKJskcj
