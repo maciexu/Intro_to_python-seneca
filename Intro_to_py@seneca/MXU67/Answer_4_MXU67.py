@@ -1,8 +1,12 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 26 11:33:42 2020
 
-@author: mengx
+"""
+Question 4) I have shown you how to make a dictionary suggestion in the Day 07 notes. 
+Now I want you to use that knowledge in answering the following question:
+We want to implement an autocomplete feature that provides suggestions as a user types a phrase in the search field. 
+The autocomplete is like the Google search suggests a feature. 
+When you start searching for a keyword in the Google search, it suggests a few items to you to make life easier for you. 
+The list we have in mind currently has a product catalog of around 3 million objects and only want to autocomplete the product name. 
+Use the products.json in the following link: https://github.com/BestBuyAPIs/open-data- set
 """
 
 import json

@@ -1,8 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Feb 26 00:38:24 2020
 
-@author: mengx
+"""
+
+Question 3) Let’s say we want to check if the sum of two numbers in a list is equal to 10. 
+The list can be a very big list. We do not want to iterate through the list more than once. 
+Do not use the brute force method.
+
 """
 
 lst = [3,4,1,2,9,8, 0,10]
