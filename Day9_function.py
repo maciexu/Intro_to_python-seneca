@@ -184,3 +184,76 @@ def multiple_letter_count(string):
     return {letter: string.count(letter) for letter in string}
 print(multiple_letter_count(string))
 
+# parameters, *args, defalut paremeters, **kwargs
+#unpack tuple/list use *
+#unpack dictionary use **
+def sum_of_nums(*args):
+  print(args)
+  total = 0
+  for num in args:
+    total += num
+  print(total)
+nums = (2,3,4,5,6,7)
+sum_of_nums(*nums)
+
+"""Q46: let’s say we have the following list. 
+Please write a function that it counts the number sevens (7s) 
+in the list (use unpacking)"""
+Nums= [90,1,35,67,89,20,3,1,2,3,4,5,6,9,34,46,57,68,79,12,23,34,55,1,90,54,34,76,8,23,34,45,56,67,78,12,23,34, 45,56,67,768,23,4,5,6,7,8,9,12,34,14,15,16,17,11,7,11,8,4,6,2,5,8,7,10,12,13,14,15,7,8,7,7,345,23,34,45,56, 67,1,7,3,6,7,2,3,4,5,6,7,8,9,8,7,6,5,4,2,1,2,3,4,5,6,7,8,9,0,9,8,7,8,7,6,5,4,3,2,1,7]
+def seven(*args):
+  total = 0
+  for num in Nums:
+    if str(7) in str(num):
+      total += 1
+  print(total)
+seven(*Nums) 
+
+def dis_name(first, last):
+  print(f'{first} {last}')
+my_name = {"first": "Macie", "last": "Xu"}
+dis_name(**my_name)
+
+"""Q49: If we have a dictionary like this: data = dict(a=1,b=2,c=3). 
+Write a function that adds the three values in the dictionary """
+data = dict(a=1,b=2,c=3)
+def sum_value(**kwargs):
+  total = sum(kwargs)
+  print(total)
+sum_value(**data)
+# not working
+
+def add_numbers(a,b,c):
+    print(a + b + c)  
+data = dict(a=1,b=2,c=3)
+add_numbers(**data)
+
+
+# recusion
+
+def fib(n):
+    if n <=2:
+        return 1
+    else:
+        return fib(n-1)+ fib(n-2)
+    
+print (fib(6))
+
+"""Q56: Through recursion, check if a word is a palindrome (remember that palindromes are read backward as
+they read normally, e.g., Ada, racecar.)"""
+
+
+def is_palindrome(s):
+    if len(s) < 1:
+        return True
+    else:
+        if s[0] == s[-1]:
+            return is_palindrome(s[1:-1])
+        else:
+            return False
+
+a=str(input("Enter string:"))
+if(is_palindrome(a)==True):
+    print("String is a palindrome!")
+else:
+    print("String isn't a palindrome!")
+
