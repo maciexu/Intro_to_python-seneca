@@ -13,7 +13,7 @@ also do not use the file I/O methods that is suggested in this code
 (https://stackoverflow.com/questions/36873485/compare-md5-hashes-of-two-files-in-python) 
 
 """
-
+"""
 import hashlib
 
 h1 = hashlib.sha256()
@@ -39,6 +39,7 @@ c = str(h3.hexdigest())
 print(a == b)
 print(b == c)
 print(a == c)
+"""
 
 #import re
 #import os
