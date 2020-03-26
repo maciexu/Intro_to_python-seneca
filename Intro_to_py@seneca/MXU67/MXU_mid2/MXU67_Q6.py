@@ -36,7 +36,7 @@ if data:        #if bool(data) == True
         print(f"I've got 1 joke about {user}. Here it is:")
         detail = data[0]['joke']
         print(detail)
-    if len(data) > 1:
+    elif len(data) > 1:
        total = len(data) 
        print(f"I've got {total} jokes about {user}, Here's one:")
        random_one = choice(data)

@@ -24,10 +24,11 @@ file1 = get_file_hash(file)
 file2 = get_file_hash(file)    
 """    
 
+"""
 file1 = input("plz enter a 'virtual' file name. : ")
-file1 = input("plz enter another 'virtual' file name. : ")
+file2 = input("plz enter another 'virtual' file name. : ")
 print(Simhash(file1).distance(Simhash(file2)))
-
+"""
 
 
 
@@ -69,5 +70,92 @@ for doc_id, doc in documents.items():
 for hash, doc_list in hashes:
     if doc_list > 1:
         print("Duplicates documents: ", doc_list)
+"""
+
+""" It's not working between files.
+def similarity(path):
+    path = input("plz enter the file path including the full name: ")
+    file = open(path, "rb")
+    file = file.read()
+    simhasher = Simhash(file)
+    sim_value = simhasher.value
+    return sim_value
+
+path = ""
+a = float(similarity(path))
+b = float(similarity(path))
+
+if a > b:
+    similar = b / a
+else:
+    similar = a / b
+    
+print(similar)
+"""   
+
+
+
+
+# seeking two article similarities
+def simhash_similarity(text1,text2):
+    """
+         :param tex1: text 1
+         :param text2: text 2
+         :return: returns the similarity of two articles
+    """
+    aa_simhash = Simhash(text1)
+    bb_simhash = Simhash(text2)
+
+         # print simhash value binary
+    #print(bin(aa_simhash.value))
+    #print(bin(bb_simhash.value))
+
+         
+    #distince = aa_simhash.distance(bb_simhash)
+    
+
+    a = float(aa_simhash.value)
+    b = float(bb_simhash.value)
+
+    if a > b:
+        similar= b / a
+    else:
+        similar= a / b
+
+    return similar
+
+
+text1 = input("Plz enter some text: ")
+text2 = input("Plz enter some text: ")
+similar=simhash_similarity(text1,text2)
+print(similar)
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
